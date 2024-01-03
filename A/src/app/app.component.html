@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <button (click)="counter()">Add Circle</button>
+  </div>
+  <div *ngFor="let item of count; let i = index">
+    <div
+      class="circle"
+      [ngClass]="{ selected: i === selectedCircle }"
+      (click)="toggleColor(i)"
+    >
+      {{ changeColorCount[i] }}
+    </div>
+  </div>
+</div>
